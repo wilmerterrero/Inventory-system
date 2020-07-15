@@ -40,7 +40,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconBtnDel = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconBtnEdit = new FontAwesome.Sharp.IconButton();
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -129,6 +129,7 @@
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(406, 312);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
@@ -159,24 +160,25 @@
             this.iconBtnDel.UseVisualStyleBackColor = false;
             this.iconBtnDel.Click += new System.EventHandler(this.iconBtnDel_Click);
             // 
-            // iconButton2
+            // iconBtnEdit
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(627, 431);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(147, 53);
-            this.iconButton2.TabIndex = 7;
-            this.iconButton2.Text = "EDITAR";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconBtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconBtnEdit.FlatAppearance.BorderSize = 0;
+            this.iconBtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnEdit.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconBtnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconBtnEdit.IconColor = System.Drawing.Color.Black;
+            this.iconBtnEdit.IconSize = 16;
+            this.iconBtnEdit.Location = new System.Drawing.Point(627, 431);
+            this.iconBtnEdit.Name = "iconBtnEdit";
+            this.iconBtnEdit.Rotation = 0D;
+            this.iconBtnEdit.Size = new System.Drawing.Size(147, 53);
+            this.iconBtnEdit.TabIndex = 7;
+            this.iconBtnEdit.Text = "EDITAR";
+            this.iconBtnEdit.UseVisualStyleBackColor = false;
+            this.iconBtnEdit.Click += new System.EventHandler(this.iconBtnEdit_Click);
             // 
             // iconBtnInsert
             // 
@@ -229,7 +231,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconBtnDel);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.iconBtnEdit);
             this.Controls.Add(this.iconBtnInsert);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxNombre);
@@ -252,7 +254,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton iconBtnInsert;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconBtnEdit;
         private FontAwesome.Sharp.IconButton iconBtnDel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxMarca;

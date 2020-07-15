@@ -45,12 +45,38 @@ namespace PROG1_PROYECTO_FINAL
             }
         }
 
+
+        private void iconBtnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                objeto.EditarProd(idProducto, textBoxNombre.Text, textBoxMarca.Text, double.Parse(textBoxPrecio.Text));
+                MessageBox.Show("Actualizado correctamente");
+                MostrarProdctos();
+                CleanForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se pudo insertar los datos por: " + ex);
+
+            }
+        }
+
         private void iconBtnDel_Click(object sender, EventArgs e)
         {
-            idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            objeto.EliminarProd(idProducto);
-            MessageBox.Show("Eliminado correctamente");
-            MostrarProdctos();
+            try
+            {
+                idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                objeto.EliminarProd(idProducto);
+                MessageBox.Show("Eliminado correctamente");
+                MostrarProdctos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se pudo insertar los datos por: " + ex);
+
+            }
         }
 
         private void CleanForm()
@@ -59,5 +85,20 @@ namespace PROG1_PROYECTO_FINAL
             textBoxMarca.Clear();
             textBoxPrecio.Clear();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                textBoxNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                textBoxMarca.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBoxPrecio.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
     }
 }
