@@ -15,7 +15,7 @@ namespace PROG1_PROYECTO_FINAL
         }
 
         public virtual void Insertar(string nombre, string marca, double precio) { }
-
+        public virtual void Editar(int id, string nombre, string marca, double precio) { }
         public virtual void Eliminar(int id) { }
     }
 }

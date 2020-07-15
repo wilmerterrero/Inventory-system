@@ -38,6 +38,20 @@ namespace PROG1_PROYECTO_FINAL
             conexion.CerrarConexion();
         }
 
+        public override void Editar(int id, string nombre, string marca, double precio)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EditarProductos";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id", id);
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@Marca", marca);
+            comando.Parameters.AddWithValue("@precio", precio);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
         public override void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
