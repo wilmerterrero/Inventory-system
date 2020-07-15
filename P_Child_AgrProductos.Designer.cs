@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconBtnDel = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
@@ -139,24 +139,25 @@
             this.panel1.Size = new System.Drawing.Size(322, 536);
             this.panel1.TabIndex = 9;
             // 
-            // iconButton3
+            // iconBtnDel
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(886, 431);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(147, 53);
-            this.iconButton3.TabIndex = 8;
-            this.iconButton3.Text = "ELIMINAR";
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconBtnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconBtnDel.FlatAppearance.BorderSize = 0;
+            this.iconBtnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnDel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnDel.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconBtnDel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconBtnDel.IconColor = System.Drawing.Color.Black;
+            this.iconBtnDel.IconSize = 16;
+            this.iconBtnDel.Location = new System.Drawing.Point(886, 431);
+            this.iconBtnDel.Name = "iconBtnDel";
+            this.iconBtnDel.Rotation = 0D;
+            this.iconBtnDel.Size = new System.Drawing.Size(147, 53);
+            this.iconBtnDel.TabIndex = 8;
+            this.iconBtnDel.Text = "ELIMINAR";
+            this.iconBtnDel.UseVisualStyleBackColor = false;
+            this.iconBtnDel.Click += new System.EventHandler(this.iconBtnDel_Click);
             // 
             // iconButton2
             // 
@@ -227,7 +228,7 @@
             this.Controls.Add(this.textBoxMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.iconButton3);
+            this.Controls.Add(this.iconBtnDel);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconBtnInsert);
             this.Controls.Add(this.dataGridView1);
@@ -252,7 +253,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton iconBtnInsert;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconBtnDel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxMarca;
         private System.Windows.Forms.Label label3;

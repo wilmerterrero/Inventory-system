@@ -21,5 +21,10 @@ namespace PROG1_PROYECTO_FINAL
         {
             obj.Insertar(nombre, marca, Convert.ToDouble(precio));
         }
+
+        public void EliminarProd(string id)
+        {
+            obj.Eliminar(Convert.ToInt32(id));
+        }
     }
 }

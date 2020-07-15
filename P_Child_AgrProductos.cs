@@ -13,6 +13,7 @@ namespace PROG1_PROYECTO_FINAL
     public partial class P_Child_AgrProductos : Form
     {
         C_Productos objeto = new C_Productos();
+        private string idProducto = null;
         public P_Child_AgrProductos()
         {
             InitializeComponent();
@@ -42,6 +43,14 @@ namespace PROG1_PROYECTO_FINAL
                 MessageBox.Show("no se pudo insertar los datos por: " + ex);
 
             }
+        }
+
+        private void iconBtnDel_Click(object sender, EventArgs e)
+        {
+            idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            objeto.EliminarProd(idProducto);
+            MessageBox.Show("Eliminado correctamente");
+            MostrarProdctos();
         }
 
         private void CleanForm()

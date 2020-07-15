@@ -37,5 +37,16 @@ namespace PROG1_PROYECTO_FINAL
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public override void Eliminar(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EliminarProductos";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id", id);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
     }
 }
