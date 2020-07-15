@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PROG1_PROYECTO_FINAL.C_Productos">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAIAAAAAAAAAAAAgAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>C_Productos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG1_PROYECTO_FINAL.Productos" Collapsed="true">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Productos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG1_PROYECTO_FINAL.S_Productos">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAQAAAAAAAAAAAAAAIAgAAAAAAAAAAAQAAE=</HashCode>
+      <FileName>S_Productos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG1_PROYECTO_FINAL.Cliente_Regular">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAIgAAAAgAAAAAAAAAAAAAACAgAAAAA=</HashCode>
+      <FileName>Cliente_Regular.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PROG1_PROYECTO_FINAL.Cliente_Premium">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAIgAAAAgAAAAAAAAAAAAAACAgAAAAA=</HashCode>
+      <FileName>Cliente_Premium.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="PROG1_PROYECTO_FINAL.IPersona" Collapsed="true">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAIAAAAAgAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>IPersona.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PROG1_PROYECTO_FINAL.ICliente">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>ICliente.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PROG1_PROYECTO_FINAL.IProveedor" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IProveedor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
