@@ -25,7 +25,7 @@ namespace PROG1_PROYECTO_FINAL
             return tabla;
         }
 
-        public override void Insertar(string nombre, string marca, double precio)
+        public override void Insertar(string nombre, string marca, double precio, int tipo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarProductos";
@@ -33,6 +33,7 @@ namespace PROG1_PROYECTO_FINAL
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@Marca", marca);
             comando.Parameters.AddWithValue("@precio", precio);
+            comando.Parameters.AddWithValue("@tipo", tipo);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();

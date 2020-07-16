@@ -22,6 +22,7 @@ namespace PROG1_PROYECTO_FINAL
         private void P_Child_AgrProductos_Load(object sender, EventArgs e)
         {
             MostrarProdctos();
+            ComboBoxTipo_Load();
         }
 
         private void MostrarProdctos()
@@ -33,7 +34,7 @@ namespace PROG1_PROYECTO_FINAL
         {
             try
             {
-                objeto.InsertarProd(textBoxNombre.Text, textBoxMarca.Text, double.Parse(textBoxPrecio.Text));
+                objeto.InsertarProd(textBoxNombre.Text, textBoxMarca.Text, double.Parse(textBoxPrecio.Text), comboBxTipo.SelectedIndex);
                 MessageBox.Show("se inserto correctamente");
                 MostrarProdctos();
                 CleanForm();
@@ -77,6 +78,15 @@ namespace PROG1_PROYECTO_FINAL
                 MessageBox.Show("no se pudo insertar los datos por: " + ex);
 
             }
+        }
+
+        private void ComboBoxTipo_Load()
+        {
+            comboBxTipo.Items.Insert(0, "-- Selec. un item --");
+            comboBxTipo.SelectedIndex = 0;
+            comboBxTipo.Items.Add("Computadoras");
+            comboBxTipo.Items.Add("Celulares & Tablets");
+            comboBxTipo.Items.Add("Accesorios");
         }
 
         private void CleanForm()

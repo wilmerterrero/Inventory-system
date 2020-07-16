@@ -78,5 +78,10 @@ namespace PROG1_PROYECTO_FINAL
         {
             OpenChildForm(new P_Child_Inventario());
         }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

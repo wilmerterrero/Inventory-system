@@ -17,9 +17,9 @@ namespace PROG1_PROYECTO_FINAL
             tabla = obj.Mostrar(tabla);
             return tabla;
         }
-        public void InsertarProd(string nombre, string marca, double precio)
+        public void InsertarProd(string nombre, string marca, double precio, int tipo)
         {
-            obj.Insertar(nombre, marca, Convert.ToDouble(precio));
+            obj.Insertar(nombre, marca, Convert.ToDouble(precio), Convert.ToInt32(tipo));
         }
 
         public void EditarProd(string id, string nombre, string marca, double precio)

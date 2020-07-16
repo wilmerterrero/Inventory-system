@@ -44,6 +44,8 @@
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBxTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             // textBoxPrecio
             // 
             this.textBoxPrecio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrecio.Location = new System.Drawing.Point(382, 328);
+            this.textBoxPrecio.Location = new System.Drawing.Point(382, 286);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(210, 28);
             this.textBoxPrecio.TabIndex = 3;
@@ -79,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(378, 286);
+            this.label2.Location = new System.Drawing.Point(378, 244);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 23);
             this.label2.TabIndex = 2;
@@ -127,7 +129,7 @@
             this.dataGridView1.ShowCellErrors = false;
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(406, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(406, 398);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -151,7 +153,7 @@
             this.iconBtnDel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnDel.IconColor = System.Drawing.Color.Black;
             this.iconBtnDel.IconSize = 16;
-            this.iconBtnDel.Location = new System.Drawing.Point(886, 431);
+            this.iconBtnDel.Location = new System.Drawing.Point(886, 471);
             this.iconBtnDel.Name = "iconBtnDel";
             this.iconBtnDel.Rotation = 0D;
             this.iconBtnDel.Size = new System.Drawing.Size(147, 53);
@@ -171,7 +173,7 @@
             this.iconBtnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnEdit.IconColor = System.Drawing.Color.Black;
             this.iconBtnEdit.IconSize = 16;
-            this.iconBtnEdit.Location = new System.Drawing.Point(627, 431);
+            this.iconBtnEdit.Location = new System.Drawing.Point(627, 471);
             this.iconBtnEdit.Name = "iconBtnEdit";
             this.iconBtnEdit.Rotation = 0D;
             this.iconBtnEdit.Size = new System.Drawing.Size(147, 53);
@@ -191,7 +193,7 @@
             this.iconBtnInsert.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnInsert.IconColor = System.Drawing.Color.Black;
             this.iconBtnInsert.IconSize = 16;
-            this.iconBtnInsert.Location = new System.Drawing.Point(382, 431);
+            this.iconBtnInsert.Location = new System.Drawing.Point(382, 471);
             this.iconBtnInsert.Name = "iconBtnInsert";
             this.iconBtnInsert.Rotation = 0D;
             this.iconBtnInsert.Size = new System.Drawing.Size(147, 53);
@@ -203,7 +205,7 @@
             // textBoxMarca
             // 
             this.textBoxMarca.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMarca.Location = new System.Drawing.Point(382, 206);
+            this.textBoxMarca.Location = new System.Drawing.Point(382, 186);
             this.textBoxMarca.Name = "textBoxMarca";
             this.textBoxMarca.Size = new System.Drawing.Size(210, 28);
             this.textBoxMarca.TabIndex = 11;
@@ -213,11 +215,31 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(378, 164);
+            this.label3.Location = new System.Drawing.Point(378, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "Marca";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(378, 341);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 23);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Tipo";
+            // 
+            // comboBxTipo
+            // 
+            this.comboBxTipo.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBxTipo.FormattingEnabled = true;
+            this.comboBxTipo.Location = new System.Drawing.Point(382, 391);
+            this.comboBxTipo.Name = "comboBxTipo";
+            this.comboBxTipo.Size = new System.Drawing.Size(210, 29);
+            this.comboBxTipo.TabIndex = 15;
             // 
             // P_Child_AgrProductos
             // 
@@ -225,6 +247,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1089, 536);
+            this.Controls.Add(this.comboBxTipo);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxMarca);
@@ -259,5 +283,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxMarca;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBxTipo;
     }
 }

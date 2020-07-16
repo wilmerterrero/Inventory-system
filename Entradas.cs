@@ -7,14 +7,12 @@ using System.Data;
 
 namespace PROG1_PROYECTO_FINAL
 {
-    abstract class Productos
+    abstract class Entradas
     {
         public virtual DataTable Mostrar(DataTable table)
         {
             return table;
         }
-        public virtual void Insertar(string nombre, string marca, double precio, int tipo) { }
-        public virtual void Editar(int id, string nombre, string marca, double precio) { }
-        public virtual void Eliminar(int id) { }
+        public virtual void Insertar(string producto, string proveedor, int cantidad, string fecha) { }
     }
 }

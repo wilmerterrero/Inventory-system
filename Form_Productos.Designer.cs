@@ -37,9 +37,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTittleBar = new System.Windows.Forms.Panel();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.agrandar = new FontAwesome.Sharp.IconButton();
+            this.cerrar = new FontAwesome.Sharp.IconButton();
+            this.minimizar = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelWindow = new System.Windows.Forms.Panel();
@@ -186,9 +186,9 @@
             // panelTittleBar
             // 
             this.panelTittleBar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panelTittleBar.Controls.Add(this.iconButton8);
-            this.panelTittleBar.Controls.Add(this.iconButton7);
-            this.panelTittleBar.Controls.Add(this.iconButton6);
+            this.panelTittleBar.Controls.Add(this.agrandar);
+            this.panelTittleBar.Controls.Add(this.cerrar);
+            this.panelTittleBar.Controls.Add(this.minimizar);
             this.panelTittleBar.Controls.Add(this.iconButton5);
             this.panelTittleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTittleBar.Location = new System.Drawing.Point(282, 0);
@@ -197,53 +197,54 @@
             this.panelTittleBar.TabIndex = 3;
             this.panelTittleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTittleBar_MouseDown);
             // 
-            // iconButton8
+            // agrandar
             // 
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-            this.iconButton8.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconSize = 22;
-            this.iconButton8.Location = new System.Drawing.Point(1023, 3);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Rotation = 0D;
-            this.iconButton8.Size = new System.Drawing.Size(33, 23);
-            this.iconButton8.TabIndex = 4;
-            this.iconButton8.UseVisualStyleBackColor = true;
+            this.agrandar.FlatAppearance.BorderSize = 0;
+            this.agrandar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agrandar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.agrandar.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.agrandar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
+            this.agrandar.IconColor = System.Drawing.Color.Gainsboro;
+            this.agrandar.IconSize = 22;
+            this.agrandar.Location = new System.Drawing.Point(1023, 3);
+            this.agrandar.Name = "agrandar";
+            this.agrandar.Rotation = 0D;
+            this.agrandar.Size = new System.Drawing.Size(33, 23);
+            this.agrandar.TabIndex = 4;
+            this.agrandar.UseVisualStyleBackColor = true;
             // 
-            // iconButton7
+            // cerrar
             // 
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.iconButton7.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton7.IconSize = 22;
-            this.iconButton7.Location = new System.Drawing.Point(1062, 3);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Rotation = 0D;
-            this.iconButton7.Size = new System.Drawing.Size(33, 23);
-            this.iconButton7.TabIndex = 3;
-            this.iconButton7.UseVisualStyleBackColor = true;
+            this.cerrar.FlatAppearance.BorderSize = 0;
+            this.cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cerrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.cerrar.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.cerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.cerrar.IconColor = System.Drawing.Color.Gainsboro;
+            this.cerrar.IconSize = 22;
+            this.cerrar.Location = new System.Drawing.Point(1062, 3);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Rotation = 0D;
+            this.cerrar.Size = new System.Drawing.Size(33, 23);
+            this.cerrar.TabIndex = 3;
+            this.cerrar.UseVisualStyleBackColor = true;
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
             // 
-            // iconButton6
+            // minimizar
             // 
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconSize = 22;
-            this.iconButton6.Location = new System.Drawing.Point(984, 3);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Rotation = 0D;
-            this.iconButton6.Size = new System.Drawing.Size(33, 23);
-            this.iconButton6.TabIndex = 2;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.minimizar.FlatAppearance.BorderSize = 0;
+            this.minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.minimizar.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.minimizar.IconColor = System.Drawing.Color.Gainsboro;
+            this.minimizar.IconSize = 22;
+            this.minimizar.Location = new System.Drawing.Point(984, 3);
+            this.minimizar.Name = "minimizar";
+            this.minimizar.Rotation = 0D;
+            this.minimizar.Size = new System.Drawing.Size(33, 23);
+            this.minimizar.TabIndex = 2;
+            this.minimizar.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
@@ -341,9 +342,9 @@
         private FontAwesome.Sharp.IconButton iconBtnAgrProd;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelTittleBar;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton agrandar;
+        private FontAwesome.Sharp.IconButton cerrar;
+        private FontAwesome.Sharp.IconButton minimizar;
         private FontAwesome.Sharp.IconButton iconButton5;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelWindow;

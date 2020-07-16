@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(P_Child_Entradas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBxProducto = new System.Windows.Forms.ComboBox();
+            this.comboBxProveedor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.iconBtnEntradas = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,23 +62,24 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Producto";
             // 
-            // comboBox1
+            // comboBxProducto
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(371, 78);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(376, 29);
-            this.comboBox1.TabIndex = 12;
+            this.comboBxProducto.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBxProducto.FormattingEnabled = true;
+            this.comboBxProducto.Location = new System.Drawing.Point(371, 78);
+            this.comboBxProducto.Name = "comboBxProducto";
+            this.comboBxProducto.Size = new System.Drawing.Size(376, 29);
+            this.comboBxProducto.TabIndex = 12;
+            this.comboBxProducto.SelectedIndexChanged += new System.EventHandler(this.comboBxProducto_SelectedIndexChanged);
             // 
-            // comboBox2
+            // comboBxProveedor
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(371, 186);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(376, 29);
-            this.comboBox2.TabIndex = 14;
+            this.comboBxProveedor.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBxProveedor.FormattingEnabled = true;
+            this.comboBxProveedor.Location = new System.Drawing.Point(371, 186);
+            this.comboBxProveedor.Name = "comboBxProveedor";
+            this.comboBxProveedor.Size = new System.Drawing.Size(376, 29);
+            this.comboBxProveedor.TabIndex = 14;
             // 
             // label2
             // 
@@ -120,21 +122,22 @@
             this.iconBtnInsert.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnInsert.IconColor = System.Drawing.Color.Black;
             this.iconBtnInsert.IconSize = 16;
-            this.iconBtnInsert.Location = new System.Drawing.Point(884, 456);
+            this.iconBtnInsert.Location = new System.Drawing.Point(833, 456);
             this.iconBtnInsert.Name = "iconBtnInsert";
             this.iconBtnInsert.Rotation = 0D;
-            this.iconBtnInsert.Size = new System.Drawing.Size(147, 53);
+            this.iconBtnInsert.Size = new System.Drawing.Size(198, 53);
             this.iconBtnInsert.TabIndex = 17;
             this.iconBtnInsert.Text = "AGREGAR";
             this.iconBtnInsert.UseVisualStyleBackColor = false;
+            this.iconBtnInsert.Click += new System.EventHandler(this.iconBtnInsert_Click);
             // 
-            // textBoxNombre
+            // textBoxCantidad
             // 
-            this.textBoxNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(371, 299);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(376, 28);
-            this.textBoxNombre.TabIndex = 19;
+            this.textBoxCantidad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCantidad.Location = new System.Drawing.Point(371, 299);
+            this.textBoxCantidad.Name = "textBoxCantidad";
+            this.textBoxCantidad.Size = new System.Drawing.Size(376, 28);
+            this.textBoxCantidad.TabIndex = 19;
             // 
             // label4
             // 
@@ -147,26 +150,48 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Cantidad";
             // 
+            // iconBtnEntradas
+            // 
+            this.iconBtnEntradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconBtnEntradas.FlatAppearance.BorderSize = 0;
+            this.iconBtnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnEntradas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnEntradas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnEntradas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconBtnEntradas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconBtnEntradas.IconColor = System.Drawing.Color.Black;
+            this.iconBtnEntradas.IconSize = 16;
+            this.iconBtnEntradas.Location = new System.Drawing.Point(879, 227);
+            this.iconBtnEntradas.Name = "iconBtnEntradas";
+            this.iconBtnEntradas.Rotation = 0D;
+            this.iconBtnEntradas.Size = new System.Drawing.Size(152, 53);
+            this.iconBtnEntradas.TabIndex = 20;
+            this.iconBtnEntradas.Text = "VER TABLA";
+            this.iconBtnEntradas.UseVisualStyleBackColor = false;
+            this.iconBtnEntradas.Click += new System.EventHandler(this.iconBtnEntradas_Click);
+            // 
             // P_Child_Entradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1089, 536);
-            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.iconBtnEntradas);
+            this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.iconBtnInsert);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBxProveedor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBxProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "P_Child_Entradas";
             this.Text = "P_Child_Entradas";
+            this.Load += new System.EventHandler(this.P_Child_Entradas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,13 +201,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBxProducto;
+        private System.Windows.Forms.ComboBox comboBxProveedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton iconBtnInsert;
-        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton iconBtnEntradas;
     }
 }

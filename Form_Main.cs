@@ -49,5 +49,10 @@ namespace PROG1_PROYECTO_FINAL
             ReleaseCapture();
             SendMessage(this.Handle, 0X112, 0XF012, 0);
         }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
