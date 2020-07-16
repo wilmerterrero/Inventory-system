@@ -35,7 +35,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconBtnProveedores = new FontAwesome.Sharp.IconButton();
             this.iconBtnProductos = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.iconButton4);
             this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.iconButton2);
+            this.panel1.Controls.Add(this.iconBtnProveedores);
             this.panel1.Controls.Add(this.iconBtnProductos);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -156,28 +156,29 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
+            // iconBtnProveedores
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TruckLoading;
-            this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 260);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(282, 78);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "PROVEEDORES";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconBtnProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconBtnProveedores.FlatAppearance.BorderSize = 0;
+            this.iconBtnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnProveedores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnProveedores.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnProveedores.ForeColor = System.Drawing.Color.White;
+            this.iconBtnProveedores.IconChar = FontAwesome.Sharp.IconChar.TruckLoading;
+            this.iconBtnProveedores.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconBtnProveedores.IconSize = 32;
+            this.iconBtnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnProveedores.Location = new System.Drawing.Point(0, 260);
+            this.iconBtnProveedores.Name = "iconBtnProveedores";
+            this.iconBtnProveedores.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconBtnProveedores.Rotation = 0D;
+            this.iconBtnProveedores.Size = new System.Drawing.Size(282, 78);
+            this.iconBtnProveedores.TabIndex = 5;
+            this.iconBtnProveedores.Text = "PROVEEDORES";
+            this.iconBtnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnProveedores.UseVisualStyleBackColor = false;
+            this.iconBtnProveedores.Click += new System.EventHandler(this.iconBtnProveedores_Click);
             // 
             // iconBtnProductos
             // 
@@ -390,7 +391,7 @@
         private FontAwesome.Sharp.IconButton iconBtnProductos;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconBtnProveedores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton5;
