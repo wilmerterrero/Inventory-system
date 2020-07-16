@@ -37,11 +37,9 @@ namespace PROG1_PROYECTO_FINAL
 
         private void iconBtnInsert_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Convert.ToString(dateTimePicker1.Value.Date));
             try
             {
-                objeto.InsertarEntrada(comboBxProducto.Text, comboBxProveedor.Text, int.Parse(textBoxCantidad.Text),
-                    Convert.ToString(dateTimePicker1.Value.Date));
+                objeto.InsertarEntrada(comboBxProducto.Text, comboBxProveedor.Text, int.Parse(textBoxCantidad.Text));
                 MessageBox.Show("se inserto correctamente");
                 CleanForm();
             }

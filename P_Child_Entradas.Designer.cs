@@ -34,8 +34,6 @@
             this.comboBxProducto = new System.Windows.Forms.ComboBox();
             this.comboBxProveedor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(367, 35);
+            this.label1.Location = new System.Drawing.Point(364, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 11;
@@ -66,7 +64,7 @@
             // 
             this.comboBxProducto.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBxProducto.FormattingEnabled = true;
-            this.comboBxProducto.Location = new System.Drawing.Point(371, 78);
+            this.comboBxProducto.Location = new System.Drawing.Point(368, 143);
             this.comboBxProducto.Name = "comboBxProducto";
             this.comboBxProducto.Size = new System.Drawing.Size(376, 29);
             this.comboBxProducto.TabIndex = 12;
@@ -76,7 +74,7 @@
             // 
             this.comboBxProveedor.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBxProveedor.FormattingEnabled = true;
-            this.comboBxProveedor.Location = new System.Drawing.Point(371, 186);
+            this.comboBxProveedor.Location = new System.Drawing.Point(368, 251);
             this.comboBxProveedor.Name = "comboBxProveedor";
             this.comboBxProveedor.Size = new System.Drawing.Size(376, 29);
             this.comboBxProveedor.TabIndex = 14;
@@ -86,30 +84,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(367, 143);
+            this.label2.Location = new System.Drawing.Point(364, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "Proveedor";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(367, 361);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 23);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Fecha de Entrada";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(371, 398);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(376, 30);
-            this.dateTimePicker1.TabIndex = 16;
             // 
             // iconBtnInsert
             // 
@@ -134,7 +113,7 @@
             // textBoxCantidad
             // 
             this.textBoxCantidad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCantidad.Location = new System.Drawing.Point(371, 299);
+            this.textBoxCantidad.Location = new System.Drawing.Point(368, 364);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(376, 28);
             this.textBoxCantidad.TabIndex = 19;
@@ -144,7 +123,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(367, 257);
+            this.label4.Location = new System.Drawing.Point(364, 322);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 23);
             this.label4.TabIndex = 18;
@@ -180,8 +159,6 @@
             this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.iconBtnInsert);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBxProveedor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBxProducto);
@@ -204,8 +181,6 @@
         private System.Windows.Forms.ComboBox comboBxProducto;
         private System.Windows.Forms.ComboBox comboBxProveedor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton iconBtnInsert;
         private System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.Label label4;
