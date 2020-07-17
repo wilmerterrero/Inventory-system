@@ -8,10 +8,8 @@ namespace PROG1_PROYECTO_FINAL
 {
     interface IPersona
     {
-        string Id { get; set; }
-        string Cedula { get; set; }
-        string Nombre { get; set; }
-        string Telefono { get; set; }
-        string Email { get; set; }
+        void Insertar(string nombre, string cedula, string telefono, string email, int categoria);
+        void Editar(int id, string nombre, string cedula, string telefono, string email, int categoria);
+        void Eliminar(int id);
     }
 }

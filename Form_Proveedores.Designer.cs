@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Proveedores));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconBtnAgrProV = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTittleBar = new System.Windows.Forms.Panel();
+            this.panelShadow = new System.Windows.Forms.Panel();
+            this.panelWindow = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.agrandar = new FontAwesome.Sharp.IconButton();
             this.cerrar = new FontAwesome.Sharp.IconButton();
             this.minimizar = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panelShadow = new System.Windows.Forms.Panel();
-            this.panelWindow = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconBtnAgrProV = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTittleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelWindow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,56 +60,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 701);
+            this.panel1.Size = new System.Drawing.Size(282, 664);
             this.panel1.TabIndex = 3;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 289);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(282, 126);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "BUSCAR";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconBtnAgrProV
-            // 
-            this.iconBtnAgrProV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.iconBtnAgrProV.FlatAppearance.BorderSize = 0;
-            this.iconBtnAgrProV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnAgrProV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconBtnAgrProV.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnAgrProV.ForeColor = System.Drawing.Color.White;
-            this.iconBtnAgrProV.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.iconBtnAgrProV.IconColor = System.Drawing.Color.GhostWhite;
-            this.iconBtnAgrProV.IconSize = 32;
-            this.iconBtnAgrProV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnAgrProV.Location = new System.Drawing.Point(0, 176);
-            this.iconBtnAgrProV.Name = "iconBtnAgrProV";
-            this.iconBtnAgrProV.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconBtnAgrProV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconBtnAgrProV.Rotation = 0D;
-            this.iconBtnAgrProV.Size = new System.Drawing.Size(282, 126);
-            this.iconBtnAgrProV.TabIndex = 3;
-            this.iconBtnAgrProV.Text = "PROVEEDORES";
-            this.iconBtnAgrProV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnAgrProV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnAgrProV.UseVisualStyleBackColor = false;
-            this.iconBtnAgrProV.Click += new System.EventHandler(this.iconBtnAgrProV_Click);
             // 
             // panel3
             // 
@@ -121,16 +73,6 @@
             this.panel3.Size = new System.Drawing.Size(282, 160);
             this.panel3.TabIndex = 4;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(54, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelTittleBar
             // 
             this.panelTittleBar.BackColor = System.Drawing.Color.MidnightBlue;
@@ -141,8 +83,53 @@
             this.panelTittleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTittleBar.Location = new System.Drawing.Point(282, 0);
             this.panelTittleBar.Name = "panelTittleBar";
-            this.panelTittleBar.Size = new System.Drawing.Size(1139, 72);
+            this.panelTittleBar.Size = new System.Drawing.Size(1107, 75);
             this.panelTittleBar.TabIndex = 4;
+            this.panelTittleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTittleBar_MouseDown_1);
+            // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.Location = new System.Drawing.Point(282, 75);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(1107, 9);
+            this.panelShadow.TabIndex = 8;
+            // 
+            // panelWindow
+            // 
+            this.panelWindow.Controls.Add(this.label1);
+            this.panelWindow.Controls.Add(this.iconPictureBox1);
+            this.panelWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelWindow.Location = new System.Drawing.Point(282, 84);
+            this.panelWindow.Name = "panelWindow";
+            this.panelWindow.Size = new System.Drawing.Size(1107, 580);
+            this.panelWindow.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(330, 389);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(442, 70);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "PROVEEDORES";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.iconPictureBox1.IconSize = 369;
+            this.iconPictureBox1.Location = new System.Drawing.Point(365, 75);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(369, 369);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 6;
+            this.iconPictureBox1.TabStop = false;
             // 
             // agrandar
             // 
@@ -212,70 +199,85 @@
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = true;
             // 
-            // iconPictureBox1
+            // iconButton1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconPictureBox1.IconSize = 369;
-            this.iconPictureBox1.Location = new System.Drawing.Point(390, 80);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(369, 369);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox1.TabIndex = 6;
-            this.iconPictureBox1.TabStop = false;
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 289);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(282, 126);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.Text = "BUSCAR";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // panelShadow
+            // iconBtnAgrProV
             // 
-            this.panelShadow.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(282, 72);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1139, 9);
-            this.panelShadow.TabIndex = 8;
+            this.iconBtnAgrProV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconBtnAgrProV.FlatAppearance.BorderSize = 0;
+            this.iconBtnAgrProV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnAgrProV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnAgrProV.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnAgrProV.ForeColor = System.Drawing.Color.White;
+            this.iconBtnAgrProV.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.iconBtnAgrProV.IconColor = System.Drawing.Color.GhostWhite;
+            this.iconBtnAgrProV.IconSize = 32;
+            this.iconBtnAgrProV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnAgrProV.Location = new System.Drawing.Point(0, 176);
+            this.iconBtnAgrProV.Name = "iconBtnAgrProV";
+            this.iconBtnAgrProV.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconBtnAgrProV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.iconBtnAgrProV.Rotation = 0D;
+            this.iconBtnAgrProV.Size = new System.Drawing.Size(282, 126);
+            this.iconBtnAgrProV.TabIndex = 3;
+            this.iconBtnAgrProV.Text = "PROVEEDORES";
+            this.iconBtnAgrProV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnAgrProV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnAgrProV.UseVisualStyleBackColor = false;
+            this.iconBtnAgrProV.Click += new System.EventHandler(this.iconBtnAgrProV_Click);
             // 
-            // panelWindow
+            // pictureBox1
             // 
-            this.panelWindow.Controls.Add(this.label1);
-            this.panelWindow.Controls.Add(this.iconPictureBox1);
-            this.panelWindow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelWindow.Location = new System.Drawing.Point(282, 81);
-            this.panelWindow.Name = "panelWindow";
-            this.panelWindow.Size = new System.Drawing.Size(1139, 620);
-            this.panelWindow.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(355, 394);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(442, 70);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "PROVEEDORES";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(54, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(170, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(1421, 701);
+            this.ClientSize = new System.Drawing.Size(1389, 664);
             this.Controls.Add(this.panelWindow);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTittleBar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Proveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Proveedores";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTittleBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelWindow.ResumeLayout(false);
             this.panelWindow.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

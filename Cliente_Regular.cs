@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace PROG1_PROYECTO_FINAL
 {
-    class Cliente_Regular : ICliente
+    class Cliente_Regular : Cliente
     {
-        public string Id { get; set; }
-        public string Cedula { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Email { get; set; }
-        public string Categoria
+        public override string Categoria
         {
             get
             {
@@ -26,7 +21,7 @@ namespace PROG1_PROYECTO_FINAL
             }
         }
 
-        public double Descuento(double importe)
+        public override double Descuento(double importe)
         {
             return importe;
         }

@@ -10,33 +10,39 @@ using System.Windows.Forms;
 
 namespace PROG1_PROYECTO_FINAL
 {
-    public partial class P_Child_AgrProductos : Form
+    public partial class Prov_Child_AgrProveedor : Form
     {
-        C_Productos objeto = new C_Productos();
-        private string idProducto = null;
-        public P_Child_AgrProductos()
+        C_Proveedores objeto = new C_Proveedores();
+        private string idProveedor = null;
+        public Prov_Child_AgrProveedor()
         {
             InitializeComponent();
         }
-
-        private void P_Child_AgrProductos_Load(object sender, EventArgs e)
+        private void Prov_Child_AgrProveedor_Load(object sender, EventArgs e)
         {
-            MostrarProdctos();
+            MostrarProvdor();
             ComboBoxTipo_Load();
         }
-
-        private void MostrarProdctos()
+        private void ComboBoxTipo_Load()
         {
-            dataGridView1.DataSource = objeto.MostrarProd();
+            comboBxTipo.Items.Insert(0, "-- Selec. un item --");
+            comboBxTipo.SelectedIndex = 0;
+            comboBxTipo.Items.Add("Computadoras");
+            comboBxTipo.Items.Add("Celulares & Tablets");
+            comboBxTipo.Items.Add("Accesorios");
+        }
+        private void MostrarProvdor()
+        {
+            dataGridView1.DataSource = objeto.MostrarProv();
         }
 
         private void iconBtnInsert_Click(object sender, EventArgs e)
         {
             try
             {
-                objeto.InsertarProd(textBoxNombre.Text, textBoxMarca.Text, double.Parse(textBoxPrecio.Text), comboBxTipo.SelectedIndex);
+                objeto.InsertarProv(textBoxNombre.Text, textBoxCedula.Text, textBoxTel.Text, textBoxEmail.Text, comboBxTipo.SelectedIndex);
                 MessageBox.Show("se inserto correctamente");
-                MostrarProdctos();
+                MostrarProvdor();
                 CleanForm();
             }
             catch (Exception ex)
@@ -50,10 +56,10 @@ namespace PROG1_PROYECTO_FINAL
         {
             try
             {
-                idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                objeto.EditarProd(idProducto, textBoxNombre.Text, textBoxMarca.Text, double.Parse(textBoxPrecio.Text));
+                idProveedor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                objeto.EditarProv(int.Parse(idProveedor), textBoxNombre.Text, textBoxCedula.Text, textBoxTel.Text, textBoxEmail.Text, comboBxTipo.SelectedIndex);
                 MessageBox.Show("Actualizado correctamente");
-                MostrarProdctos();
+                MostrarProvdor();
                 CleanForm();
             }
             catch (Exception ex)
@@ -67,10 +73,10 @@ namespace PROG1_PROYECTO_FINAL
         {
             try
             {
-                idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                objeto.EliminarProd(idProducto);
+                idProveedor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                objeto.EliminarProv(idProveedor);
                 MessageBox.Show("Eliminado correctamente");
-                MostrarProdctos();
+                MostrarProvdor();
                 CleanForm();
             }
             catch (Exception ex)
@@ -80,20 +86,13 @@ namespace PROG1_PROYECTO_FINAL
             }
         }
 
-        private void ComboBoxTipo_Load()
-        {
-            comboBxTipo.Items.Insert(0, "-- Selec. un item --");
-            comboBxTipo.SelectedIndex = 0;
-            comboBxTipo.Items.Add("Computadoras");
-            comboBxTipo.Items.Add("Celulares & Tablets");
-            comboBxTipo.Items.Add("Accesorios");
-        }
-
         private void CleanForm()
         {
             textBoxNombre.Clear();
-            textBoxMarca.Clear();
-            textBoxPrecio.Clear();
+            textBoxCedula.Clear();
+            textBoxEmail.Clear();
+            textBoxTel.Clear();
+            comboBxTipo.SelectedIndex = 0;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -101,14 +100,15 @@ namespace PROG1_PROYECTO_FINAL
             try
             {
                 textBoxNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                textBoxMarca.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                textBoxPrecio.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                textBoxCedula.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBoxEmail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                textBoxTel.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                comboBxTipo.SelectedItem = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
         }
-
     }
 }

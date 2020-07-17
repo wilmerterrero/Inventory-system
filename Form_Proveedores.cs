@@ -49,15 +49,15 @@ namespace PROG1_PROYECTO_FINAL
             childForm.Show();
         }
 
-        private void panelTittleBar_MouseDown(object sender, MouseEventArgs e)
+        private void iconBtnAgrProV_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Prov_Child_AgrProveedor());
+        }
+
+        private void panelTittleBar_MouseDown_1(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0X112, 0XF012, 0);
-        }
-
-        private void iconBtnAgrProV_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

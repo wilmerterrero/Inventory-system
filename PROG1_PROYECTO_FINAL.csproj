@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C_Entradas.cs" />
+    <Compile Include="C_Proveedores.cs" />
     <Compile Include="Entradas.cs" />
     <Compile Include="Entradas_Modal.cs">
       <SubType>Form</SubType>
@@ -69,7 +70,7 @@
     <Compile Include="Form_Proveedores.Designer.cs">
       <DependentUpon>Form_Proveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="ICliente.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Cliente_Premium.cs" />
     <Compile Include="Cliente_Regular.cs" />
     <Compile Include="Connection.cs" />
@@ -87,11 +88,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Proveedor.cs" />
     <Compile Include="P_Child_AgrProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="P_Child_AgrProductos.Designer.cs">
       <DependentUpon>P_Child_AgrProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prov_Child_AgrProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prov_Child_AgrProveedor.Designer.cs">
+      <DependentUpon>Prov_Child_AgrProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="P_Child_Entradas.cs">
       <SubType>Form</SubType>
@@ -109,7 +117,7 @@
     <Compile Include="S_Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IProveedor.cs" />
+    <Compile Include="S_Proveedores.cs" />
     <EmbeddedResource Include="Entradas_Modal.resx">
       <DependentUpon>Entradas_Modal.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P_Child_AgrProductos.resx">
       <DependentUpon>P_Child_AgrProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prov_Child_AgrProveedor.resx">
+      <DependentUpon>Prov_Child_AgrProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P_Child_Entradas.resx">
       <DependentUpon>P_Child_Entradas.cs</DependentUpon>
