@@ -18,19 +18,11 @@ namespace PROG1_PROYECTO_FINAL
         {
             InitializeComponent();
 
-
             //Config del Form
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
-
-        private void iconBtnBack_Click(object sender, EventArgs e)
-        {
-            Form_Main Main = new Form_Main();
-            this.Hide();
-            Main.Show();
         }
 
         //DRAG FORM
@@ -56,6 +48,12 @@ namespace PROG1_PROYECTO_FINAL
             childForm.BringToFront();
             childForm.Show();
 
+        }
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Form_Main Main = new Form_Main();
+            this.Hide();
+            Main.Show();
         }
 
         private void panelTittleBar_MouseDown(object sender, MouseEventArgs e)
@@ -83,5 +81,6 @@ namespace PROG1_PROYECTO_FINAL
         {
             this.Hide();
         }
+
     }
 }

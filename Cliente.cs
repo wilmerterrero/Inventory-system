@@ -13,8 +13,8 @@ namespace PROG1_PROYECTO_FINAL
         {
             return table;
         }
-        public virtual void Insertar(string nombre, string cedula, string telefono, string email, int tipo) { }
-        public virtual void Editar(int id, string nombre, string cedula, string telefono, string email, int tipo) { }
+        public virtual void Insertar(string nombre, string cedula, string telefono, string email, int categoria) { }
+        public virtual void Editar(int id, string nombre, string cedula, string telefono, string email, int categoria) { }
         public virtual void Eliminar(int id) { }
         public virtual string Categoria { get; set; }
         public virtual double Descuento(double importe)
