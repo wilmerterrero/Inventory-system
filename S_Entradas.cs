@@ -25,14 +25,15 @@ namespace PROG1_PROYECTO_FINAL
             return tabla;
         }
 
-        public override void Insertar(string producto, string proveedor, int cantidad)
+        public override void Insertar(string producto, string proveedor, int cantidad, string fecha)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "INSERT INTO Entradas VALUES ((SELECT prod_id FROM Productos WHERE nombre = @producto), " +
-                "(SELECT prov_id FROM Proveedores WHERE nombre = @proveedor), @cantidad, getdate())";
-            comando.Parameters.AddWithValue("@producto", producto);
-            comando.Parameters.AddWithValue("@proveedor", proveedor);
+            comando.CommandText = "InsertarEntradasProductos";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@prod_id", producto);
+            comando.Parameters.AddWithValue("@prov_id", proveedor);
             comando.Parameters.AddWithValue("@cantidad", cantidad);
+            comando.Parameters.AddWithValue("@fecha", fecha);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();

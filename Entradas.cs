@@ -13,6 +13,6 @@ namespace PROG1_PROYECTO_FINAL
         {
             return table;
         }
-        public virtual void Insertar(string producto, string proveedor, int cantidad) { }
+        public virtual void Insertar(string producto, string proveedor, int cantidad, string fecha) { }
     }
 }

@@ -70,22 +70,20 @@ namespace PROG1_PROYECTO_FINAL
             try
             {
                 //ENTRADAS
-
-                query = "SELECT E.cantidad, E.prod_id, Prod.nombre FROM Productos AS Prod " +
+                query = "SELECT E.cantidad FROM Productos AS Prod " +
                     $"INNER JOIN Entradas AS E ON E.prod_id = Prod.prod_id WHERE Prod.nombre = '{comboBxProducto.Text}';";
-                adpt = new SqlDataAdapter(query, conexion.AbrirConexion());
-                dt = new DataTable();
-                adpt.Fill(dt);
-                comboBxCantidad.DataSource = dt;
-                comboBxCantidad.ValueMember = "prod_id";              
-                foreach(var i in comboBxCantidad.DisplayMember = "cantidad")
-                {
-                    comboBxCantidad.Items.Add(i);
-                }
-            }
-            catch (Exception)
-            {
 
+                SqlCommand cmd = new SqlCommand(query, conexion.AbrirConexion());
+                SqlDataReader data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    label4.Text = data.GetValue(0).ToString();
+                }
+                conexion.CerrarConexion();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
             }
         }
 
@@ -93,5 +91,12 @@ namespace PROG1_PROYECTO_FINAL
         {
             //MessageBox.Show(comboBxProducto.SelectedItem.ToString());
         }
+
+        private void C_Child_Pedidos_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
     }
 }

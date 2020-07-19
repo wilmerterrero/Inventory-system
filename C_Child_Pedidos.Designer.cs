@@ -36,8 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
             this.iconBtnEntradas = new FontAwesome.Sharp.IconButton();
-            this.comboBxCantidad = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,15 +132,6 @@
             this.iconBtnEntradas.Text = "VER PEDIDOS";
             this.iconBtnEntradas.UseVisualStyleBackColor = false;
             // 
-            // comboBxCantidad
-            // 
-            this.comboBxCantidad.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBxCantidad.FormattingEnabled = true;
-            this.comboBxCantidad.Location = new System.Drawing.Point(378, 386);
-            this.comboBxCantidad.Name = "comboBxCantidad";
-            this.comboBxCantidad.Size = new System.Drawing.Size(376, 29);
-            this.comboBxCantidad.TabIndex = 40;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -149,13 +143,45 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "Cantidad";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(378, 389);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(376, 30);
+            this.numericUpDown1.TabIndex = 41;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(468, 441);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Cantidad";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(374, 441);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 18);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "*Cantidad:";
+            // 
             // C_Child_Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1111, 601);
-            this.Controls.Add(this.comboBxCantidad);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.iconBtnEntradas);
             this.Controls.Add(this.iconBtnInsert);
@@ -167,6 +193,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "C_Child_Pedidos";
             this.Text = "C_Child_Pedidos";
+            this.Load += new System.EventHandler(this.C_Child_Pedidos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +209,9 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconBtnInsert;
         private FontAwesome.Sharp.IconButton iconBtnEntradas;
-        private System.Windows.Forms.ComboBox comboBxCantidad;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
