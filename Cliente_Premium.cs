@@ -23,8 +23,8 @@ namespace PROG1_PROYECTO_FINAL
 
         public override double Descuento(double importe)
         {
-            double descuento = importe * 0.5;
-            return descuento;
+            importe -= importe * 0.05;
+            return importe;
         }
     }
 }

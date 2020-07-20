@@ -25,7 +25,7 @@ namespace PROG1_PROYECTO_FINAL
             return tabla;
         }
 
-        public override void Insertar(string producto, string proveedor, int cantidad, string fecha)
+        public override void Insertar(string producto, string proveedor, decimal cantidad, string fecha)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarEntradasProductos";

@@ -22,6 +22,10 @@ namespace PROG1_PROYECTO_FINAL
         {
             MostrarProvdor();
             ComboBoxTipo_Load();
+
+            //SETTING DGV
+            dataGridView1.Columns[3].Width = 200;
+            dataGridView1.Columns[5].Width = 180;
         }
         private void ComboBoxTipo_Load()
         {

@@ -25,6 +25,7 @@ namespace PROG1_PROYECTO_FINAL
         private void P_Child_Entradas_Load(object sender, EventArgs e)
         {
             ComboBoxProducto_Load();
+            CleanForm();
         }
 
         private void iconBtnEntradas_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace PROG1_PROYECTO_FINAL
         {
             try
             {
-                objeto.InsertarEntrada(comboBxProducto.SelectedValue.ToString(), comboBxProveedor.SelectedValue.ToString(), int.Parse(textBoxCantidad.Text), "");
+                objeto.InsertarEntrada(comboBxProducto.SelectedValue.ToString(), comboBxProveedor.SelectedValue.ToString(), cantidad.Value, "");
                 MessageBox.Show("se inserto correctamente");
                 CleanForm();
             }
@@ -90,8 +91,7 @@ namespace PROG1_PROYECTO_FINAL
         }
 
         private void CleanForm()
-        {
-            textBoxCantidad.Clear();
+        { 
             comboBxProducto.SelectedIndex = -1;
             comboBxProveedor.SelectedIndex = -1;
         }

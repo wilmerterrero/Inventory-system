@@ -17,7 +17,7 @@ namespace PROG1_PROYECTO_FINAL
             tabla = obj.Mostrar(tabla);
             return tabla;
         }
-        public void InsertarEntrada(string producto, string proveedor, int cantidad, string fecha)
+        public void InsertarEntrada(string producto, string proveedor, decimal cantidad, string fecha)
         {
             obj.Insertar(producto, proveedor, cantidad, fecha);
         }

@@ -35,9 +35,10 @@
             this.comboBxProveedor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
-            this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.iconBtnEntradas = new FontAwesome.Sharp.IconButton();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,6 +63,7 @@
             // 
             // comboBxProducto
             // 
+            this.comboBxProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBxProducto.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBxProducto.FormattingEnabled = true;
             this.comboBxProducto.Location = new System.Drawing.Point(368, 143);
@@ -72,6 +74,7 @@
             // 
             // comboBxProveedor
             // 
+            this.comboBxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBxProveedor.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBxProveedor.FormattingEnabled = true;
             this.comboBxProveedor.Location = new System.Drawing.Point(368, 251);
@@ -110,14 +113,6 @@
             this.iconBtnInsert.UseVisualStyleBackColor = false;
             this.iconBtnInsert.Click += new System.EventHandler(this.iconBtnInsert_Click);
             // 
-            // textBoxCantidad
-            // 
-            this.textBoxCantidad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCantidad.Location = new System.Drawing.Point(368, 364);
-            this.textBoxCantidad.Name = "textBoxCantidad";
-            this.textBoxCantidad.Size = new System.Drawing.Size(376, 28);
-            this.textBoxCantidad.TabIndex = 19;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -149,14 +144,32 @@
             this.iconBtnEntradas.UseVisualStyleBackColor = false;
             this.iconBtnEntradas.Click += new System.EventHandler(this.iconBtnEntradas_Click);
             // 
+            // cantidad
+            // 
+            this.cantidad.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidad.Location = new System.Drawing.Point(368, 366);
+            this.cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(376, 30);
+            this.cantidad.TabIndex = 42;
+            this.cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // P_Child_Entradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1089, 536);
+            this.Controls.Add(this.cantidad);
             this.Controls.Add(this.iconBtnEntradas);
-            this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.iconBtnInsert);
             this.Controls.Add(this.comboBxProveedor);
@@ -169,6 +182,7 @@
             this.Name = "P_Child_Entradas";
             this.Text = "P_Child_Entradas";
             this.Load += new System.EventHandler(this.P_Child_Entradas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,8 +196,8 @@
         private System.Windows.Forms.ComboBox comboBxProveedor;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconBtnInsert;
-        private System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton iconBtnEntradas;
+        private System.Windows.Forms.NumericUpDown cantidad;
     }
 }

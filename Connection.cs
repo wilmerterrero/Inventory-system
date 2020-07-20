@@ -10,6 +10,7 @@ namespace PROG1_PROYECTO_FINAL
 {
     class Connection
     {
+        //CONEXION
         private SqlConnection Conexion = new SqlConnection("Data source= WILMER-LAPTOP; Initial Catalog=sys_inventario; Integrated Security=True");
 
         public SqlConnection AbrirConexion()

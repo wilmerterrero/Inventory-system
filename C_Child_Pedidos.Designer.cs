@@ -37,10 +37,12 @@
             this.iconBtnInsert = new FontAwesome.Sharp.IconButton();
             this.iconBtnEntradas = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            this.cantidadProducto = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.categoriaCliente = new System.Windows.Forms.Label();
+            this.precioXcantidad = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,12 +56,14 @@
             // 
             // comboBxCliente
             // 
+            this.comboBxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBxCliente.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBxCliente.FormattingEnabled = true;
             this.comboBxCliente.Location = new System.Drawing.Point(378, 147);
             this.comboBxCliente.Name = "comboBxCliente";
             this.comboBxCliente.Size = new System.Drawing.Size(376, 29);
             this.comboBxCliente.TabIndex = 18;
+            this.comboBxCliente.SelectedIndexChanged += new System.EventHandler(this.comboBxCliente_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -74,6 +78,7 @@
             // 
             // comboBxProducto
             // 
+            this.comboBxProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBxProducto.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBxProducto.FormattingEnabled = true;
             this.comboBxProducto.Location = new System.Drawing.Point(378, 268);
@@ -143,24 +148,34 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "Cantidad";
             // 
-            // numericUpDown1
+            // cantidad
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(378, 389);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(376, 30);
-            this.numericUpDown1.TabIndex = 41;
+            this.cantidad.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidad.Location = new System.Drawing.Point(378, 389);
+            this.cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(376, 30);
+            this.cantidad.TabIndex = 41;
+            this.cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // label4
+            // cantidadProducto
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(468, 441);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Cantidad";
+            this.cantidadProducto.AutoSize = true;
+            this.cantidadProducto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidadProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cantidadProducto.Location = new System.Drawing.Point(468, 441);
+            this.cantidadProducto.Name = "cantidadProducto";
+            this.cantidadProducto.Size = new System.Drawing.Size(78, 20);
+            this.cantidadProducto.TabIndex = 42;
+            this.cantidadProducto.Text = "Cantidad";
             // 
             // label5
             // 
@@ -173,15 +188,40 @@
             this.label5.TabIndex = 43;
             this.label5.Text = "*Cantidad:";
             // 
+            // categoriaCliente
+            // 
+            this.categoriaCliente.AutoSize = true;
+            this.categoriaCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriaCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.categoriaCliente.Location = new System.Drawing.Point(459, 107);
+            this.categoriaCliente.Name = "categoriaCliente";
+            this.categoriaCliente.Size = new System.Drawing.Size(37, 20);
+            this.categoriaCliente.TabIndex = 44;
+            this.categoriaCliente.Text = "Tipo";
+            // 
+            // precioXcantidad
+            // 
+            this.precioXcantidad.AutoSize = true;
+            this.precioXcantidad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioXcantidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.precioXcantidad.Location = new System.Drawing.Point(373, 511);
+            this.precioXcantidad.Name = "precioXcantidad";
+            this.precioXcantidad.Size = new System.Drawing.Size(140, 20);
+            this.precioXcantidad.TabIndex = 45;
+            this.precioXcantidad.Text = "Precio x Cantidad";
+            this.precioXcantidad.Visible = false;
+            // 
             // C_Child_Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1111, 601);
+            this.Controls.Add(this.precioXcantidad);
+            this.Controls.Add(this.categoriaCliente);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.cantidadProducto);
+            this.Controls.Add(this.cantidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.iconBtnEntradas);
             this.Controls.Add(this.iconBtnInsert);
@@ -194,7 +234,7 @@
             this.Name = "C_Child_Pedidos";
             this.Text = "C_Child_Pedidos";
             this.Load += new System.EventHandler(this.C_Child_Pedidos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,8 +250,10 @@
         private FontAwesome.Sharp.IconButton iconBtnInsert;
         private FontAwesome.Sharp.IconButton iconBtnEntradas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.Label cantidadProducto;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label categoriaCliente;
+        private System.Windows.Forms.Label precioXcantidad;
     }
 }

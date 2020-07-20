@@ -71,6 +71,7 @@
     <Compile Include="Entradas_Modal.Designer.cs">
       <DependentUpon>Entradas_Modal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturas.cs" />
     <Compile Include="Form_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
