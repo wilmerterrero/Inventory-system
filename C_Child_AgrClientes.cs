@@ -110,5 +110,11 @@ namespace PROG1_PROYECTO_FINAL
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void reporte_Click(object sender, EventArgs e)
+        {
+            Reportes_Clientes reportes_Clientes = new Reportes_Clientes();
+            reportes_Clientes.ShowDialog();
+        }
     }
 }

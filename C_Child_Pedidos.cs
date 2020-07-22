@@ -25,6 +25,9 @@ namespace PROG1_PROYECTO_FINAL
         public C_Child_Pedidos()
         {
             InitializeComponent();
+        }
+        private void C_Child_Pedidos_Load(object sender, EventArgs e)
+        {
             ComboBoxCliente_Load();
             ComboBoxProducto_Load();
             CleanForm();
@@ -158,16 +161,17 @@ namespace PROG1_PROYECTO_FINAL
             }
         }
 
-        private void C_Child_Pedidos_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void CleanForm()
         {
             comboBxCliente.SelectedIndex = -1;
             comboBxProducto.SelectedIndex = -1;
+        }
+
+        private void iconBtnEntradas_Click(object sender, EventArgs e)
+        {
+            Facturas_Modal modal = new Facturas_Modal();
+            modal.Owner = this; // we want the new form to float on top of this one
+            modal.Show();
         }
     }
 }

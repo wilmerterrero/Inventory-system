@@ -15,6 +15,24 @@ namespace PROG1_PROYECTO_FINAL
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
 
+        public DataTable Mostrar(DataTable tabla)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarFactura";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
+        public DataTable MostrarFacturas()
+        {
+            DataTable tabla = new DataTable();
+            tabla = Mostrar(tabla);
+            return tabla;
+        }
+
         public void Crear(string cl_id, string prod_id, decimal cantidad, double importe, double total_descuento, string fecha, float total)
         {
             comando.Connection = conexion.AbrirConexion();

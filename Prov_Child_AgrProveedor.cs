@@ -114,5 +114,11 @@ namespace PROG1_PROYECTO_FINAL
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void reporte_Click(object sender, EventArgs e)
+        {
+            Reporte_Proveedores reporte_Proveedores = new Reporte_Proveedores();
+            reporte_Proveedores.ShowDialog();
+        }
     }
 }

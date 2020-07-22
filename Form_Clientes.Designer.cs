@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconBtnPedidos = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconBtnSearch = new FontAwesome.Sharp.IconButton();
             this.iconBtnAgrClientes = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,7 +56,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.iconBtnPedidos);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.iconBtnSearch);
             this.panel1.Controls.Add(this.iconBtnAgrClientes);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -90,28 +90,29 @@
             this.iconBtnPedidos.UseVisualStyleBackColor = false;
             this.iconBtnPedidos.Click += new System.EventHandler(this.iconBtnPedidos_Click);
             // 
-            // iconButton1
+            // iconBtnSearch
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 401);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(282, 126);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "BUSCAR";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconBtnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.iconBtnSearch.FlatAppearance.BorderSize = 0;
+            this.iconBtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnSearch.ForeColor = System.Drawing.Color.White;
+            this.iconBtnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconBtnSearch.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconBtnSearch.IconSize = 32;
+            this.iconBtnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnSearch.Location = new System.Drawing.Point(0, 401);
+            this.iconBtnSearch.Name = "iconBtnSearch";
+            this.iconBtnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconBtnSearch.Rotation = 0D;
+            this.iconBtnSearch.Size = new System.Drawing.Size(282, 126);
+            this.iconBtnSearch.TabIndex = 7;
+            this.iconBtnSearch.Text = "BUSCAR";
+            this.iconBtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnSearch.UseVisualStyleBackColor = false;
+            this.iconBtnSearch.Click += new System.EventHandler(this.iconBtnSearch_Click);
             // 
             // iconBtnAgrClientes
             // 
@@ -313,7 +314,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconBtnSearch;
         private FontAwesome.Sharp.IconButton iconBtnAgrClientes;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;

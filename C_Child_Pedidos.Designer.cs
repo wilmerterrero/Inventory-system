@@ -136,6 +136,7 @@
             this.iconBtnEntradas.TabIndex = 38;
             this.iconBtnEntradas.Text = "VER PEDIDOS";
             this.iconBtnEntradas.UseVisualStyleBackColor = false;
+            this.iconBtnEntradas.Click += new System.EventHandler(this.iconBtnEntradas_Click);
             // 
             // label3
             // 

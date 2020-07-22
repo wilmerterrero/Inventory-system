@@ -21,5 +21,9 @@ namespace PROG1_PROYECTO_FINAL
         {
             return importe;
         }
+        public virtual DataTable MostrarCategorias(DataTable table)
+        {
+            return table;
+        }
     }
 }

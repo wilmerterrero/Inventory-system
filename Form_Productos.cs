@@ -82,5 +82,9 @@ namespace PROG1_PROYECTO_FINAL
             this.Hide();
         }
 
+        private void iconBtnSearch_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Search_Productos());
+        }
     }
 }

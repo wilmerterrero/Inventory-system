@@ -110,5 +110,10 @@ namespace PROG1_PROYECTO_FINAL
             }
         }
 
+        private void reporte_Click(object sender, EventArgs e)
+        {
+            Reporte_Productos reporte_productos = new Reporte_Productos();
+            reporte_productos.ShowDialog();
+        }
     }
 }

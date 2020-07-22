@@ -11,7 +11,7 @@ namespace PROG1_PROYECTO_FINAL
     class C_Entradas : Entradas
     {
         private S_Entradas obj = new S_Entradas();
-        public DataTable MostrarProd()
+        public DataTable MostrarEntradas()
         {
             DataTable tabla = new DataTable();
             tabla = obj.Mostrar(tabla);

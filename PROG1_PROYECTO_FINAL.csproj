@@ -36,6 +36,24 @@
     <Reference Include="FontAwesome.Sharp, Version=5.13.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.13.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +82,19 @@
     <Compile Include="C_Clientes.cs" />
     <Compile Include="C_Entradas.cs" />
     <Compile Include="C_Proveedores.cs" />
+    <Compile Include="Clientes.cs">
+      <DependentUpon>Clientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entradas.cs" />
     <Compile Include="Entradas_Modal.cs">
       <SubType>Form</SubType>
@@ -72,6 +103,42 @@
       <DependentUpon>Entradas_Modal.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturas.cs" />
+    <Compile Include="Facturas_Modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas_Modal.Designer.cs">
+      <DependentUpon>Facturas_Modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Clientes_Nombre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Clientes_Nombre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Entrada_Fecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Entrada_Fecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Entrada_Proveedor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Entrada_Proveedor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Producto_Nombre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Producto_Nombre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Proveedor_Email.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Proveedor_Email.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Proveedor_Nombre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Proveedor_Nombre.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +170,11 @@
     </Compile>
     <Compile Include="IPersona.cs" />
     <Compile Include="Productos.cs" />
+    <Compile Include="DatasetProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetProductos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +205,132 @@
     <Compile Include="P_Child_Inventario.Designer.cs">
       <DependentUpon>P_Child_Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes.cs" />
+    <Compile Include="Reportes_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Clientes.Designer.cs">
+      <DependentUpon>Reportes_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Clientes_Nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Clientes_Nombre.Designer.cs">
+      <DependentUpon>Reporte_Clientes_Nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Entradas_Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Entradas_Fecha.Designer.cs">
+      <DependentUpon>Reporte_Entradas_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Entradas_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Entradas_Producto.Designer.cs">
+      <DependentUpon>Reporte_Entradas_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Entradas_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Entradas_Proveedor.Designer.cs">
+      <DependentUpon>Reporte_Entradas_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Inventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Inventario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Productos.Designer.cs">
+      <DependentUpon>Reporte_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Producto_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Producto_Inventario.Designer.cs">
+      <DependentUpon>Reporte_Producto_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Producto_Nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Producto_Nombre.Designer.cs">
+      <DependentUpon>Reporte_Producto_Nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Proveedores.Designer.cs">
+      <DependentUpon>Reporte_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Proveedores_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Proveedores_Email.Designer.cs">
+      <DependentUpon>Reporte_Proveedores_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Proveedores_Nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Proveedores_Nombre.Designer.cs">
+      <DependentUpon>Reporte_Proveedores_Nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Clientes.Designer.cs">
+      <DependentUpon>Search_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Productos.Designer.cs">
+      <DependentUpon>Search_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Proveedor.Designer.cs">
+      <DependentUpon>Search_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="sys_inventarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys_inventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sys_inventarioDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys_inventarioDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sys_inventarioDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys_inventarioDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sys_inventarioDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys_inventarioDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sys_inventarioDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys_inventarioDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sys_inventarioDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys_inventarioDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Entrada_Producto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Entrada_Producto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="S_Cliente.cs" />
     <Compile Include="S_Entradas.cs" />
     <Compile Include="S_Productos.cs" />
@@ -147,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entradas_Modal.resx">
       <DependentUpon>Entradas_Modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturas_Modal.resx">
+      <DependentUpon>Facturas_Modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Clientes.resx">
       <DependentUpon>Form_Clientes.cs</DependentUpon>
@@ -177,8 +378,160 @@
     <EmbeddedResource Include="P_Child_Inventario.resx">
       <DependentUpon>P_Child_Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEntradasProducto.rdlc" />
+    <EmbeddedResource Include="ReporteProveedores.rdlc" />
+    <EmbeddedResource Include="ReporteClientes.rdlc" />
+    <EmbeddedResource Include="ReporteProductos.rdlc" />
+    <EmbeddedResource Include="Reportes_Clientes.resx">
+      <DependentUpon>Reportes_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Clientes_Nombre.resx">
+      <DependentUpon>Reporte_Clientes_Nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Cliente_Nombre.rdlc" />
+    <EmbeddedResource Include="Reporte_Entradas_Fecha.resx">
+      <DependentUpon>Reporte_Entradas_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Entradas_Producto.resx">
+      <DependentUpon>Reporte_Entradas_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Entradas_Proveedor.resx">
+      <DependentUpon>Reporte_Entradas_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Filtro_Entrada_Fecha.rdlc" />
+    <EmbeddedResource Include="Reporte_Filtro_Entrada_Proveedor.rdlc" />
+    <EmbeddedResource Include="Reporte_Filtro_Producto_Nombre.rdlc" />
+    <EmbeddedResource Include="Reporte_Productos.resx">
+      <DependentUpon>Reporte_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Productos_Inventario.rdlc" />
+    <EmbeddedResource Include="Reporte_Producto_Inventario.resx">
+      <DependentUpon>Reporte_Producto_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Producto_Nombre.resx">
+      <DependentUpon>Reporte_Producto_Nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Proveedores.resx">
+      <DependentUpon>Reporte_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Proveedores_Email.resx">
+      <DependentUpon>Reporte_Proveedores_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Proveedores_Nombre.resx">
+      <DependentUpon>Reporte_Proveedores_Nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Proveedor_Email.rdlc" />
+    <EmbeddedResource Include="Reporte_Proveedor_Nombre.rdlc" />
+    <EmbeddedResource Include="Search_Clientes.resx">
+      <DependentUpon>Search_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_Productos.resx">
+      <DependentUpon>Search_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_Proveedor.resx">
+      <DependentUpon>Search_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
+    <None Include="Clientes.xsc">
+      <DependentUpon>Clientes.xsd</DependentUpon>
+    </None>
+    <None Include="Clientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Clientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Clientes.xss">
+      <DependentUpon>Clientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsc">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProveedores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetProveedores.xss">
+      <DependentUpon>DataSetProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Clientes_Nombre.xsc">
+      <DependentUpon>Filtro_Clientes_Nombre.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Clientes_Nombre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Clientes_Nombre.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Clientes_Nombre.xss">
+      <DependentUpon>Filtro_Clientes_Nombre.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Entrada_Fecha.xsc">
+      <DependentUpon>Filtro_Entrada_Fecha.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Entrada_Fecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Entrada_Fecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Entrada_Fecha.xss">
+      <DependentUpon>Filtro_Entrada_Fecha.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Entrada_Proveedor.xsc">
+      <DependentUpon>Filtro_Entrada_Proveedor.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Entrada_Proveedor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Entrada_Proveedor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Entrada_Proveedor.xss">
+      <DependentUpon>Filtro_Entrada_Proveedor.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Producto_Nombre.xsc">
+      <DependentUpon>Filtro_Producto_Nombre.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Producto_Nombre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Producto_Nombre.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Producto_Nombre.xss">
+      <DependentUpon>Filtro_Producto_Nombre.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Proveedor_Email.xsc">
+      <DependentUpon>Filtro_Proveedor_Email.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Proveedor_Email.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Proveedor_Email.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Proveedor_Email.xss">
+      <DependentUpon>Filtro_Proveedor_Email.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Proveedor_Nombre.xsc">
+      <DependentUpon>Filtro_Proveedor_Nombre.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Proveedor_Nombre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Proveedor_Nombre.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Proveedor_Nombre.xss">
+      <DependentUpon>Filtro_Proveedor_Nombre.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="DatasetProductos.xsc">
+      <DependentUpon>DatasetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatasetProductos.xss">
+      <DependentUpon>DatasetProductos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,6 +541,94 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reporte_Inventario.xsc">
+      <DependentUpon>Reporte_Inventario.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte_Inventario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reporte_Inventario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte_Inventario.xss">
+      <DependentUpon>Reporte_Inventario.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet.xsc">
+      <DependentUpon>sys_inventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sys_inventarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sys_inventarioDataSet.xss">
+      <DependentUpon>sys_inventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet1.xsc">
+      <DependentUpon>sys_inventarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sys_inventarioDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sys_inventarioDataSet1.xss">
+      <DependentUpon>sys_inventarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet2.xsc">
+      <DependentUpon>sys_inventarioDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sys_inventarioDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sys_inventarioDataSet2.xss">
+      <DependentUpon>sys_inventarioDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet3.xsc">
+      <DependentUpon>sys_inventarioDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sys_inventarioDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sys_inventarioDataSet3.xss">
+      <DependentUpon>sys_inventarioDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet4.xsc">
+      <DependentUpon>sys_inventarioDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sys_inventarioDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sys_inventarioDataSet4.xss">
+      <DependentUpon>sys_inventarioDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet5.xsc">
+      <DependentUpon>sys_inventarioDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sys_inventarioDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sys_inventarioDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sys_inventarioDataSet5.xss">
+      <DependentUpon>sys_inventarioDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Entrada_Producto.xsc">
+      <DependentUpon>Filtro_Entrada_Producto.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Entrada_Producto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Entrada_Producto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Filtro_Entrada_Producto.xss">
+      <DependentUpon>Filtro_Entrada_Producto.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -200,6 +641,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\entradas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

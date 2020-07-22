@@ -64,5 +64,16 @@ namespace PROG1_PROYECTO_FINAL
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public override DataTable MostrarCategorias(DataTable tabla)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "MostrarCategoriasClientes";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBxTipo = new System.Windows.Forms.ComboBox();
+            this.reporte = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +154,7 @@
             this.iconBtnDel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnDel.IconColor = System.Drawing.Color.Black;
             this.iconBtnDel.IconSize = 16;
-            this.iconBtnDel.Location = new System.Drawing.Point(886, 471);
+            this.iconBtnDel.Location = new System.Drawing.Point(777, 471);
             this.iconBtnDel.Name = "iconBtnDel";
             this.iconBtnDel.Rotation = 0D;
             this.iconBtnDel.Size = new System.Drawing.Size(147, 53);
@@ -173,7 +174,7 @@
             this.iconBtnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnEdit.IconColor = System.Drawing.Color.Black;
             this.iconBtnEdit.IconSize = 16;
-            this.iconBtnEdit.Location = new System.Drawing.Point(627, 471);
+            this.iconBtnEdit.Location = new System.Drawing.Point(576, 471);
             this.iconBtnEdit.Name = "iconBtnEdit";
             this.iconBtnEdit.Rotation = 0D;
             this.iconBtnEdit.Size = new System.Drawing.Size(147, 53);
@@ -241,12 +242,32 @@
             this.comboBxTipo.Size = new System.Drawing.Size(210, 29);
             this.comboBxTipo.TabIndex = 15;
             // 
+            // reporte
+            // 
+            this.reporte.BackColor = System.Drawing.Color.MidnightBlue;
+            this.reporte.FlatAppearance.BorderSize = 0;
+            this.reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.reporte.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reporte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.reporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.reporte.IconColor = System.Drawing.Color.White;
+            this.reporte.IconSize = 22;
+            this.reporte.Location = new System.Drawing.Point(977, 479);
+            this.reporte.Name = "reporte";
+            this.reporte.Rotation = 0D;
+            this.reporte.Size = new System.Drawing.Size(56, 37);
+            this.reporte.TabIndex = 46;
+            this.reporte.UseVisualStyleBackColor = false;
+            this.reporte.Click += new System.EventHandler(this.reporte_Click);
+            // 
             // P_Child_AgrProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1089, 536);
+            this.Controls.Add(this.reporte);
             this.Controls.Add(this.comboBxTipo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxPrecio);
@@ -285,5 +306,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBxTipo;
+        private FontAwesome.Sharp.IconButton reporte;
     }
 }

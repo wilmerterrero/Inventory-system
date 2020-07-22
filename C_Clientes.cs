@@ -17,6 +17,12 @@ namespace PROG1_PROYECTO_FINAL
             tabla = obj.Mostrar(tabla);
             return tabla;
         }
+        public DataTable MostrarCategoriasClientes()
+        {
+            DataTable tabla = new DataTable();
+            tabla = obj.MostrarCategorias(tabla);
+            return tabla;
+        }
         public void InsertarClient(string nombre, string cedula, string telefono, string email, int categoria)
         {
             obj.Insertar(nombre, cedula, telefono, email, categoria);

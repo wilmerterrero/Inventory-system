@@ -70,5 +70,10 @@ namespace PROG1_PROYECTO_FINAL
         {
             OpenChildForm(new C_Child_Pedidos());
         }
+
+        private void iconBtnSearch_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Search_Clientes());
+        }
     }
 }

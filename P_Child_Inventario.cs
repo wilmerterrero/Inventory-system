@@ -46,5 +46,11 @@ namespace PROG1_PROYECTO_FINAL
         {
             dataGridView1.DataSource = MostrarInventario();
         }
+
+        private void reporte_Click_1(object sender, EventArgs e)
+        {
+            Reporte_Producto_Inventario reporte_inventario = new Reporte_Producto_Inventario();
+            reporte_inventario.ShowDialog();
+        }
     }
 }

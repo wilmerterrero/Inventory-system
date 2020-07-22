@@ -54,10 +54,22 @@ namespace PROG1_PROYECTO_FINAL
             OpenChildForm(new Prov_Child_AgrProveedor());
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Search_Proveedor());
+        }
+
         private void panelTittleBar_MouseDown_1(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0X112, 0XF012, 0);
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Form_Main Main = new Form_Main();
+            this.Hide();
+            Main.Show();
         }
     }
 }
