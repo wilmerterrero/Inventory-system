@@ -140,7 +140,7 @@ BEGIN
 END
 CREATE PROCEDURE MostrarEntradasProductos
 AS
-SELECT prod.nombre AS 'PRODUCTO', prov.nombre AS 'PROVEEDOR', e.cantidad AS 'CANTIDAD', e.fecha AS 'FECHA DE ENTRADA' FROM Entradas AS e 
+SELECT prod.nombre AS 'PRODUCTO', prov.nombre AS 'PROVEEDOR', e.cantidad AS 'CANTIDAD', e.fecha AS 'FECHA' FROM Entradas AS e 
 INNER JOIN Productos AS prod ON e.prod_id = prod.prod_id 
 INNER JOIN Proveedores AS prov ON e.prov_id = prov.prov_id;
 
@@ -276,6 +276,20 @@ CREATE PROCEDURE EliminarCliente
 AS
 DELETE FROM Clientes WHERE cl_id = @id;
 
+--CATEGORIA
+IF EXISTS (SELECT 1 FROM sys.procedures
+			WHERE Name = 'MostrarCategoriasClientes')
+BEGIN
+	DROP PROCEDURE dbo.MostrarCategoriasClientes
+END
+CREATE PROCEDURE MostrarCategoriasClientes
+AS
+DECLARE @premium int
+DECLARE @regular int
+SET @premium = (SELECT COUNT(categoria_id) FROM Clientes WHERE categoria_id = 1);
+SET @regular = (SELECT COUNT(categoria_id) FROM Clientes WHERE categoria_id = 2);
+SELECT @premium AS 'PREMIUM', @regular AS 'REGULAR';
+
 --PEDIDOS
 CREATE FUNCTION pedidos_cantidad(@Producto int)
 RETURNS int
@@ -342,6 +356,93 @@ BEGIN CATCH
 	ROLLBACK
 END CATCH
 
+--MOSTRAR
+IF EXISTS(SELECT 1 FROM sys.procedures 
+          WHERE Name = 'MostrarFactura')
+BEGIN
+    DROP PROCEDURE dbo.MostrarFactura
+END
+CREATE PROCEDURE MostrarFactura
+AS
+SELECT cli.nombre AS 'CLIENTE', prodc.nombre AS 'PRODUCTO', f.cantidad AS 'CANTIDAD', f.importe AS 'ITBIS', 
+f.fecha AS 'FECHA', f.total_descuento AS 'TOTAL SIN ITBIS', f.total 'TOTAL' 
+FROM Facturacion AS f 
+INNER JOIN Clientes AS cli ON cli.cl_id = f.cl_id 
+INNER JOIN Productos AS prodc ON prodc.prod_id = f.prod_id;
+
+--FILTROS PRODUCTOS
+IF EXISTS(SELECT 1 FROM sys.procedures 
+          WHERE Name = 'FiltroProductos')
+BEGIN
+    DROP PROCEDURE dbo.FiltroProductos
+END
+CREATE PROCEDURE FiltroProductos
+@nombre varchar(70)
+AS
+SELECT prod_id AS 'ID', nombre AS 'NOMBRE', marca AS 'MARCA', precio as 'PRECIO' FROM Productos WHERE nombre LIKE '%' + @nombre + '%';
+
+
+IF EXISTS(SELECT 1 FROM sys.procedures 
+          WHERE Name = 'EntradasFechaFiltro')
+BEGIN
+    DROP PROCEDURE dbo.EntradasFechaFiltro
+END
+CREATE PROCEDURE EntradasFechaFiltro
+@fecha varchar(25)
+AS
+SELECT prod.nombre AS 'PRODUCTO', prov.nombre AS 'PROVEEDOR', e.cantidad AS 'CANTIDAD', e.fecha AS 'FECHA' FROM Entradas AS e 
+INNER JOIN Productos AS prod ON e.prod_id = prod.prod_id
+INNER JOIN Proveedores AS prov ON e.prov_id = prov.prov_id WHERE convert(VARCHAR(25), e.fecha, 126) LIKE '%' + @fecha + '%';
+
+IF EXISTS(SELECT 1 FROM sys.procedures 
+          WHERE Name = 'EntradasProductoFiltro')
+BEGIN
+    DROP PROCEDURE dbo.EntradasProductoFiltro
+END
+CREATE PROCEDURE EntradasProductoFiltro
+@producto varchar(100)
+AS
+SELECT prod.nombre AS 'PRODUCTO', prov.nombre AS 'PROVEEDOR', e.cantidad AS 'CANTIDAD', e.fecha AS 'FECHA' FROM Entradas AS e 
+INNER JOIN Productos AS prod ON e.prod_id = prod.prod_id
+INNER JOIN Proveedores AS prov ON e.prov_id = prov.prov_id WHERE prod.nombre LIKE '%' + @producto + '%';
+
+IF EXISTS(SELECT 1 FROM sys.procedures 
+          WHERE Name = 'EntradasProveedorFiltro')
+BEGIN
+    DROP PROCEDURE dbo.EntradasProveedorFiltro
+END
+CREATE PROCEDURE EntradasProveedorFiltro
+@proveedor varchar(100)
+AS
+SELECT prod.nombre AS 'PRODUCTO', prov.nombre AS 'PROVEEDOR', e.cantidad AS 'CANTIDAD', e.fecha AS 'FECHA' FROM Entradas AS e 
+INNER JOIN Productos AS prod ON e.prod_id = prod.prod_id
+INNER JOIN Proveedores AS prov ON e.prov_id = prov.prov_id WHERE prov.nombre LIKE '%' + @proveedor + '%';
+
+--FILTROS PROVEEDORES
+CREATE PROCEDURE ProveedorNombreFiltro
+@nombre varchar(70)
+AS
+SELECT Prov.prov_id AS 'ID', Prov.nombre AS 'NOMBRE', Prov.cedula AS 'CEDULA', Prov.email as 'EMAIL', Prov.telefono as 'TELEFONO', Tipos.nombre AS 'CATEGORIA' FROM Proveedores AS Prov 
+INNER JOIN TiposProductos Tipos ON Prov.tipos_id = Tipos.tipos_id WHERE Prov.nombre LIKE '%' + @nombre + '%';
+
+IF EXISTS(SELECT 1 FROM sys.procedures 
+          WHERE Name = 'ProveedorEmailFiltro')
+BEGIN
+    DROP PROCEDURE dbo.ProveedorEmailFiltro
+END
+CREATE PROCEDURE ProveedorEmailFiltro
+@email varchar(70)
+AS
+SELECT Prov.prov_id AS 'ID', Prov.nombre AS 'NOMBRE', Prov.cedula AS 'CEDULA', Prov.email as 'EMAIL', Prov.telefono as 'TELEFONO', Tipos.nombre AS 'CATEGORIA' FROM Proveedores AS Prov 
+INNER JOIN TiposProductos Tipos ON Prov.tipos_id = Tipos.tipos_id WHERE Prov.email LIKE '%' + @email + '%'
+
+--FILTRAR CLIENTES
+CREATE PROCEDURE ClientesNombreFiltro
+@nombre varchar(70)
+AS
+SELECT C.cl_id AS 'ID', C.nombre AS 'NOMBRE', C.cedula AS 'CEDULA', C.email as 'EMAIL', C.telefono as 'TELEFONO' FROM Clientes AS C
+WHERE C.nombre LIKE '%' + @nombre + '%';
+
 --TIPOS DE CLIENTES
 INSERT INTO CategoriasClientes VALUES ('Regular');
 INSERT INTO CategoriasClientes VALUES ('Premium');
@@ -393,6 +494,10 @@ EXEC MostrarEntradasProductos;
 
 EXEC MostrarProveedores;
 
+EXEC MostrarCategoriasClientes;
+
+EXEC EntradasFiltro @fecha = '2020'
+
 EXEC CantidadProductos @Producto = 'Galaxy A8';
 
 SELECT Prod.nombre, E.prod_id FROM Entradas AS E
@@ -401,4 +506,6 @@ INNER JOIN Productos AS Prod ON E.prod_id = Prod.prod_id
 SELECT E.cantidad, E.prod_id, Prod.nombre FROM Productos AS Prod
 INNER JOIN Entradas AS E ON E.prod_id = Prod.prod_id WHERE Prod.nombre = 'Galaxy A8';
 
-INSERT INTO Facturacion VALUES(2, 2, 50, 45.5, '2020', 5000)
+INSERT INTO Facturacion VALUES(2, 2, 50, 45.5, '2020', 5000);
+
+SELECT * FROM Productos WHERE nombre = 'Galaxy';
