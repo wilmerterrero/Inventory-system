@@ -109,7 +109,7 @@
             this.iconBtnInsert.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnInsert.IconColor = System.Drawing.Color.Black;
             this.iconBtnInsert.IconSize = 16;
-            this.iconBtnInsert.Location = new System.Drawing.Point(864, 467);
+            this.iconBtnInsert.Location = new System.Drawing.Point(859, 478);
             this.iconBtnInsert.Name = "iconBtnInsert";
             this.iconBtnInsert.Rotation = 0D;
             this.iconBtnInsert.Size = new System.Drawing.Size(147, 53);
@@ -129,7 +129,7 @@
             this.iconBtnEntradas.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnEntradas.IconColor = System.Drawing.Color.Black;
             this.iconBtnEntradas.IconSize = 16;
-            this.iconBtnEntradas.Location = new System.Drawing.Point(859, 244);
+            this.iconBtnEntradas.Location = new System.Drawing.Point(859, 297);
             this.iconBtnEntradas.Name = "iconBtnEntradas";
             this.iconBtnEntradas.Rotation = 0D;
             this.iconBtnEntradas.Size = new System.Drawing.Size(152, 53);

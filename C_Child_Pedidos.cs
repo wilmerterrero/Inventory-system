@@ -142,17 +142,23 @@ namespace PROG1_PROYECTO_FINAL
                 {
                     case "Premium":
                         cliente = new Cliente_Premium();
-                        MessageBox.Show("PREMIUM!!");
+                        MessageBox.Show("Haz elegido un Cliente Premium, se le aplicará un descuento de 5%.");
                         break;
                     case "Regular":
                         cliente = new Cliente_Regular();
-                        MessageBox.Show("REGULAR!!");
+                        MessageBox.Show("Haz elegido un Cliente Regular.");
                         break;
                     default:
                         MessageBox.Show("Elija un cliente hasta que cambie el tipo");
                         break;
                 }
+
                 facturas.Crear(comboBxCliente.SelectedValue.ToString(), comboBxProducto.SelectedValue.ToString(), cantidad.Value, 0, cliente.Descuento(Convert.ToDouble(precioXcantidad.Text)), "", 0);
+
+                //GENERANDO FACTURA
+                Factura_Generada factura = new Factura_Generada();
+                factura.ShowDialog();
+
                 CleanForm();
             }
             catch (Exception err)

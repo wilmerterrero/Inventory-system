@@ -42,6 +42,7 @@
             this.textBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.reporte = new FontAwesome.Sharp.IconButton();
             this.panelTittleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.panelTittleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTittleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTittleBar.Name = "panelTittleBar";
-            this.panelTittleBar.Size = new System.Drawing.Size(915, 45);
+            this.panelTittleBar.Size = new System.Drawing.Size(925, 45);
             this.panelTittleBar.TabIndex = 23;
             // 
             // agrandar
@@ -220,12 +221,32 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Pedidos";
             // 
+            // reporte
+            // 
+            this.reporte.BackColor = System.Drawing.Color.MidnightBlue;
+            this.reporte.FlatAppearance.BorderSize = 0;
+            this.reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.reporte.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reporte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.reporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.reporte.IconColor = System.Drawing.Color.White;
+            this.reporte.IconSize = 22;
+            this.reporte.Location = new System.Drawing.Point(843, 561);
+            this.reporte.Name = "reporte";
+            this.reporte.Rotation = 0D;
+            this.reporte.Size = new System.Drawing.Size(56, 37);
+            this.reporte.TabIndex = 49;
+            this.reporte.UseVisualStyleBackColor = false;
+            this.reporte.Click += new System.EventHandler(this.reporte_Click);
+            // 
             // Facturas_Modal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(915, 585);
+            this.ClientSize = new System.Drawing.Size(925, 621);
+            this.Controls.Add(this.reporte);
             this.Controls.Add(this.iconBtnReload);
             this.Controls.Add(this.comboBxTipo);
             this.Controls.Add(this.iconBtnSearch);
@@ -257,5 +278,6 @@
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton reporte;
     }
 }

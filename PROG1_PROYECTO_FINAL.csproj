@@ -109,6 +109,12 @@
     <Compile Include="Facturas_Modal.Designer.cs">
       <DependentUpon>Facturas_Modal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura_Generada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura_Generada.Designer.cs">
+      <DependentUpon>Factura_Generada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Filtro_Clientes_Nombre.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +129,28 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Filtro_Entrada_Proveedor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Facturas_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filtro_Facturas_Cliente.Designer.cs">
+      <DependentUpon>Filtro_Facturas_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Facturas_Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filtro_Facturas_Fecha.Designer.cs">
+      <DependentUpon>Filtro_Facturas_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Factura_Cliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Factura_Cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Filtro_Factura_Fecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filtro_Factura_Fecha.xsd</DependentUpon>
     </Compile>
     <Compile Include="Filtro_Producto_Nombre.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -235,6 +263,14 @@
     </Compile>
     <Compile Include="Reporte_Entradas_Proveedor.Designer.cs">
       <DependentUpon>Reporte_Entradas_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Factura.cs">
+      <DependentUpon>Reporte_Factura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Factura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Factura.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reporte_Inventario.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -349,6 +385,15 @@
     <EmbeddedResource Include="Facturas_Modal.resx">
       <DependentUpon>Facturas_Modal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Factura_Generada.resx">
+      <DependentUpon>Factura_Generada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filtro_Facturas_Cliente.resx">
+      <DependentUpon>Filtro_Facturas_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filtro_Facturas_Fecha.resx">
+      <DependentUpon>Filtro_Facturas_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Clientes.resx">
       <DependentUpon>Form_Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,8 +443,11 @@
     <EmbeddedResource Include="Reporte_Entradas_Proveedor.resx">
       <DependentUpon>Reporte_Entradas_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Filtro_Factura_Cliente.rdlc" />
+    <EmbeddedResource Include="Reporte_Factura_Generada.rdlc" />
     <EmbeddedResource Include="Reporte_Filtro_Entrada_Fecha.rdlc" />
     <EmbeddedResource Include="Reporte_Filtro_Entrada_Proveedor.rdlc" />
+    <EmbeddedResource Include="Reporte_Filtro_Factura_Fecha.rdlc" />
     <EmbeddedResource Include="Reporte_Filtro_Producto_Nombre.rdlc" />
     <EmbeddedResource Include="Reporte_Productos.resx">
       <DependentUpon>Reporte_Productos.cs</DependentUpon>
@@ -487,6 +535,28 @@
     <None Include="Filtro_Entrada_Proveedor.xss">
       <DependentUpon>Filtro_Entrada_Proveedor.xsd</DependentUpon>
     </None>
+    <None Include="Filtro_Factura_Cliente.xsc">
+      <DependentUpon>Filtro_Factura_Cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Factura_Cliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Factura_Cliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Factura_Cliente.xss">
+      <DependentUpon>Filtro_Factura_Cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Factura_Fecha.xsc">
+      <DependentUpon>Filtro_Factura_Fecha.xsd</DependentUpon>
+    </None>
+    <None Include="Filtro_Factura_Fecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Filtro_Factura_Fecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Filtro_Factura_Fecha.xss">
+      <DependentUpon>Filtro_Factura_Fecha.xsd</DependentUpon>
+    </None>
     <None Include="Filtro_Producto_Nombre.xsc">
       <DependentUpon>Filtro_Producto_Nombre.xsd</DependentUpon>
     </None>
@@ -541,6 +611,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reporte_Factura.xsc">
+      <DependentUpon>Reporte_Factura.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte_Factura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reporte_Factura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte_Factura.xss">
+      <DependentUpon>Reporte_Factura.xsd</DependentUpon>
+    </None>
     <None Include="Reporte_Inventario.xsc">
       <DependentUpon>Reporte_Inventario.xsd</DependentUpon>
     </None>

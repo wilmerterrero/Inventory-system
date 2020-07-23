@@ -38,7 +38,7 @@
   <Class Name="PROG1_PROYECTO_FINAL.Cliente">
     <Position X="6.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAgAAAAAAAAAIAAAAAAAAACAAAQAAA=</HashCode>
+      <HashCode>AAAAAAAAAgQAAAAgAAAAAAAAAIAAAAAAAAACAAAQAAA=</HashCode>
       <FileName>Cliente.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -54,14 +54,14 @@
   <Class Name="PROG1_PROYECTO_FINAL.S_Cliente">
     <Position X="5.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAQAAAAAAAAAAAAAAIAgAAAAAAAAAAAQAAE=</HashCode>
+      <HashCode>AAAAEAAAAgQAAAAAAAAAAAAAAIAgAAAAAAAAAAAQAAE=</HashCode>
       <FileName>S_Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PROG1_PROYECTO_FINAL.C_Clientes">
     <Position X="7.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAEAAAAABABAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAgAAAAAAAAIEAAAAABABAAA=</HashCode>
       <FileName>C_Clientes.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -89,7 +89,7 @@
   <Class Name="PROG1_PROYECTO_FINAL.C_Entradas">
     <Position X="13.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C_Entradas.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -98,6 +98,13 @@
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAQAAAAAAAAAAAAAAIAgAAAAAAAAAAAAAAE=</HashCode>
       <FileName>S_Entradas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG1_PROYECTO_FINAL.Facturas">
+    <Position X="1.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAEAAAAAQAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Facturas.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="PROG1_PROYECTO_FINAL.IPersona">

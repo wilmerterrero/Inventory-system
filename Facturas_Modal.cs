@@ -22,6 +22,9 @@ namespace PROG1_PROYECTO_FINAL
         //INSTANSEAS
         Facturas facturas = new Facturas();
 
+        //TEXTBOX PARA HACER REPORTE
+        public static string _textbox = "";
+
         public Facturas_Modal()
         {
             InitializeComponent();
@@ -60,11 +63,10 @@ namespace PROG1_PROYECTO_FINAL
                     {
                         case "Fecha":
 
-                            query = $"SELECT cli.nombre AS 'CLIENTE', prodc.nombre AS 'PRODUCTO', f.cantidad AS 'CANTIDAD', f.importe AS 'ITBIS', f.fecha AS 'FECHA', " +
-                                $"f.total_descuento AS 'TOTAL SIN ITBIS', f.total 'TOTAL' FROM Facturacion AS f " +
-                                $"INNER JOIN Clientes AS cli ON cli.cl_id = f.cl_id " +
-                                $"INNER JOIN Productos AS prodc ON prodc.prod_id = f.prod_id WHERE f.fecha LIKE '%{textBox.Text}%';";
+                            query = $"FiltroFacturaFecha";
                             cmd = new SqlCommand(query, conexion.AbrirConexion());
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@fecha", textBox.Text);
                             cmd.ExecuteNonQuery();
                             dt = new DataTable();
                             adpt = new SqlDataAdapter(cmd);
@@ -76,11 +78,10 @@ namespace PROG1_PROYECTO_FINAL
 
                         case "Cliente":
 
-                            query = $"SELECT cli.nombre AS 'CLIENTE', prodc.nombre AS 'PRODUCTO', f.cantidad AS 'CANTIDAD', f.importe AS 'ITBIS', f.fecha AS 'FECHA', " +
-                                $"f.total_descuento AS 'TOTAL SIN ITBIS', f.total 'TOTAL' FROM Facturacion AS f " +
-                                $"INNER JOIN Clientes AS cli ON cli.cl_id = f.cl_id " +
-                                $"INNER JOIN Productos AS prodc ON prodc.prod_id = f.prod_id WHERE cli.nombre LIKE '%{textBox.Text}%';";
+                            query = $"FiltroFacturaCliente";
                             cmd = new SqlCommand(query, conexion.AbrirConexion());
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@cliente", textBox.Text);
                             cmd.ExecuteNonQuery();
                             dt = new DataTable();
                             adpt = new SqlDataAdapter(cmd);
@@ -108,6 +109,40 @@ namespace PROG1_PROYECTO_FINAL
             catch(Exception err)
             {
                 MessageBox.Show(err.Message);
+            }
+        }
+
+        private void reporte_Click(object sender, EventArgs e)
+        {
+            //PASO VALOR PARA REALIZAR REPORTE
+            _textbox = textBox.Text;
+
+            if (textBox.Text != "")
+            {
+                try
+                {
+                    switch (comboBxTipo.Text)
+                    {
+                        case "Fecha":
+
+                            Filtro_Facturas_Fecha filtro_fecha = new Filtro_Facturas_Fecha();
+                            filtro_fecha.ShowDialog();
+
+                            break;
+
+                        case "Cliente":
+
+                            Filtro_Facturas_Cliente filtro_nombre = new Filtro_Facturas_Cliente();
+                            filtro_nombre.ShowDialog();
+
+                            break;
+
+                    }
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
             }
         }
     }
