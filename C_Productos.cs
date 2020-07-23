@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace PROG1_PROYECTO_FINAL
 {
-    class C_Productos : DatasetProductos
+    class C_Productos : Productos
     {
         private S_Productos obj = new S_Productos();
         public DataTable MostrarProd()

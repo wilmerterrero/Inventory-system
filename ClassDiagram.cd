@@ -101,7 +101,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PROG1_PROYECTO_FINAL.Facturas">
-    <Position X="1.25" Y="7.5" Width="1.5" />
+    <Position X="1.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAEAAAAAQAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Facturas.cs</FileName>
